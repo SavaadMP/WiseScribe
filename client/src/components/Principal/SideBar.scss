@@ -1,0 +1,127 @@
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 90px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+
+  .header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .profile {
+      display: flex;
+      align-items: center;
+      background: #e2e2e2;
+      padding: 5px;
+      border-radius: 10px;
+      margin-right: 20px;
+
+      img {
+        margin-left: 2px;
+        width: 50px;
+        border-radius: 50%;
+        margin-right: 10px;
+        font-weight: 400;
+      }
+
+      .profile_info {
+        margin-left: 2px;
+        padding: 0 10px 0 0;
+        h3 {
+          font-size: 15px;
+        }
+        p {
+          font-size: 13px;
+          font-weight: bold;
+          color: #4070f4;
+        }
+      }
+    }
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    margin: 0 24px;
+
+    .menu-icon {
+      color: #333;
+      font-size: 24px;
+      margin-right: 14px;
+      cursor: pointer;
+    }
+
+    .logo-img {
+      width: 200px;
+    }
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    background-color: #fff;
+    height: 100%;
+    padding: 20px 0 40px 0;
+    width: 260px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease-in-out;
+
+    &.active {
+      left: 0;
+    }
+
+    .logo {
+      img {
+        width: 150px;
+      }
+    }
+
+    .sidebar-content {
+      padding: 30px 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 100%;
+
+      .list {
+        list-style: none;
+
+        .nav-link {
+          display: flex;
+          align-items: center;
+          padding: 14px 12px;
+          border-radius: 8px;
+          text-decoration: none;
+
+          &:hover {
+            background-color: #4070f4;
+
+            .icon, .link {
+              color: #fff;
+            }
+          }
+
+          .icon {
+            margin-right: 14px;
+            font-size: 20px;
+            color: #707070;
+          }
+
+          .link {
+            font-size: 16px;
+            color: #707070;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+  }
+}
